@@ -2,7 +2,46 @@ LISP Programmation fonctionnel
 manipulation symbolique d'expressions/
 Non typé et 100% interprété
 
-interpréteur lisp : est dans une boucle infinie 
+interpréteur lisp : est dans une boucle infinie
 	(print(eval(read))
 
 Un programme LISP est une liste d'expression et un atom est une liste de S-expression est une S-expression
+
+Toute S-expression est représenté par un arbre binaire
+☐☐
+1 ☐☐
+  2 0
+
+Prédicats:
+	consp : teste si la S-expression est un doublet
+	listp : teste si la S-expression est une liste
+	numberp : teste si la S-expression est un nombre
+	symbolp : teste si la S-expression est un symbole
+	null : teste si la S-expression si la liste est vide
+	constantp : teste si la S-expression est une constante
+
+Un programme = donnée
+utilisé en intelligence artificielle
+
+Fonctions n-aires (fonctions qui prennent un nombre quelconque d'argument
+>(+12345) -> 15 >(+) -> 0
+
+1er arg nom de la fonction
+(defun foo (xy) Liste de paramètres de la fonction
+	(+ x y)
+)
+>(foo 1 2)
+3
+
+(defun taille(l)
+	(if null
+		((cdr list)())
+		)
+
+
+(defun taille(l)
+	(cond
+		((null l) 0)
+		((conspl l) +1(taille(cdrl)))
+	)
+)

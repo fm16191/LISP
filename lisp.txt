@@ -1,0 +1,8 @@
+LISP Programmation fonctionnel
+manipulation symbolique d'expressions/
+Non typé et 100% interprété
+
+interpréteur lisp : est dans une boucle infinie 
+	(print(eval(read))
+
+Un programme LISP est une liste d'expression et un atom est une liste de S-expression est une S-expression

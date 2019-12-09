@@ -1,4 +1,5 @@
 ; Une fonction qui affiche "test x", x fois
+; Affichage récursif
 
 (defun mafonction(x)
  (cond

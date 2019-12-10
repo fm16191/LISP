@@ -58,15 +58,18 @@
 (defun mini(x y)
  (if (< x y) x y))
 
-(defun min_max(l)
- (cond
-   ((null l) "pb")
-   ((null (cdr l) (list(car l)(car l))))
-   (t min_max_bis (card l) (car l) (car l))))
+(defun min_max(l))
+(cond
+  ((null l) "pb")
+  ((null (cdr l) (list(car l)(car l))))
+  (t min_max_bis (card l) (car l) (car l)))
 
 (defun min_max_bis(l minima maxima)
  (if (null l) (list minima maxima)
   (min_max_bis(cdr l)(mini (car l) minima) (maxi (car l) maxima))))
+
+(setq l (list 1 2 3 4 5 6 7 8 9))
+(format t "~A ~%" (min_max_bis l 0 0))
 
 
 (defun my_remove(symb l)
@@ -83,13 +86,11 @@
        (cadr (min_max (remove max1 l))))
   (* max1 max2)))
 
-
 ;Modification physique de liste
 ;rplaca >(rplaca '(1 2 3) 'a) = (a 2 3)
 ;rplacd >(rplacd '(1 2 3) 'a) = (1.a)
 
 ;rplacd : remplace le pointeur de la liste chaînée suivante par le caractère a
-
 
 ;Fonction qui renvoie le carré d'un nombre s'il est supérieur à 5
 (defun exo2(x)
